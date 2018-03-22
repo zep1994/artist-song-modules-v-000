@@ -1,7 +1,13 @@
+module Paramable  
+  module InstanceMethods
+    def to_param
+      name.downcase.gsub(' ', '-')
+    end
+  end
+end 
  
  
- 
-   module Findable
+module Findable
   module ClassMethods
     def find_by_name(name)
       self.all.detect{|o| o.name}
