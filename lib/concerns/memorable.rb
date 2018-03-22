@@ -1,3 +1,4 @@
+#Paramable
 module Paramable  
   module InstanceMethods
     def to_param
@@ -6,6 +7,9 @@ module Paramable
   end
 end
 
+
+
+#Findable
 module Findable
   module ClassMethods
     def find_by_name(name)
@@ -13,7 +17,10 @@ module Findable
     end    
   end
 end
-# //////////////////////////////////////////
+
+
+
+Memorable
 module Memorable
   module ClassMethods
     def reset_all
@@ -24,6 +31,8 @@ module Memorable
       self.all.count
     end
   end
+  
+  
   
   module InstanceMethods
     def initialize
